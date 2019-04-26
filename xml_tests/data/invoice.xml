@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<esf:invoiceInfoContainer xmlns:esf="esf">
+    <invoiceSet>
+        <invoiceInfo>
+            <invoiceBody><v2:invoice xmlns:a="abstractInvoice.esf" xmlns:v2="v2.esf">
+    <date>11.02.2019</date>
+    <invoiceType>FIXED_INVOICE</invoiceType>
+    <num>1102191</num>
+    <operatorFullname>БУЛАБАЕВА АСЕЛЬ ЕРМЕКОВНА</operatorFullname>
+    <relatedInvoice>
+        <date>11.02.2019</date>
+        <num>110219</num>
+        <registrationNumber>ESF-123456789021-20190412-500000010</registrationNumber>
+    </relatedInvoice>
+    <turnoverDate>11.02.2019</turnoverDate>
+    <consignee>
+        <countryCode>KZ</countryCode>
+    </consignee>
+    <customers>
+        <customer>
+            <address>Казахстан, Алматинская обл., г. Алматы, ул. Наурызбай Батыра, д. 154А</address>
+            <countryCode>KZ</countryCode>
+            <name>Акционерное общество "Kaspi Bank"</name>
+            <tin>971240001315</tin>
+        </customer>
+    </customers>
+    <deliveryTerm>
+        <hasContract>false</hasContract>
+    </deliveryTerm>
+    <productSet>
+        <currencyCode>KZT</currencyCode>
+        <products>
+            <product>
+                <catalogTruId>1</catalogTruId>
+                <description>тест</description>
+                <ndsAmount>0</ndsAmount>
+                <priceWithTax>1100</priceWithTax>
+                <priceWithoutTax>1100</priceWithoutTax>
+                <quantity>11</quantity>
+                <truOriginCode>4</truOriginCode>
+                <turnoverSize>1100</turnoverSize>
+                <unitNomenclature>004</unitNomenclature>
+                <unitPrice>100</unitPrice>
+            </product>
+        </products>
+        <totalExciseAmount>0</totalExciseAmount>
+        <totalNdsAmount>0</totalNdsAmount>
+        <totalPriceWithTax>1100</totalPriceWithTax>
+        <totalPriceWithoutTax>1100</totalPriceWithoutTax>
+        <totalTurnoverSize>1100</totalTurnoverSize>
+    </productSet>
+    <sellers>
+        <seller>
+            <address>Казахстан, Павлодарская обл., г. Павлодар, ул. Лермонтова, д. 90, кв. (офис) нет</address>
+            <certificateNum>0044612</certificateNum>
+            <certificateSeries>60001</certificateSeries>
+            <name>Филиал "Ертіс" акционерного общества "Каspi Bank" в городе Павлодар</name>
+            <tin>1107400162212</tin>
+        </seller>
+    </sellers>
+</v2:invoice></invoiceBody>
+            <invoiceId>20152770170175488</invoiceId>
+            <registrationNumber>ESF-33333-20190101-100000450</registrationNumber>
+            <inputDate>2019-02-11T12:31:11.514+06:00</inputDate>
+            <lastUpdateDate>2019-02-11T12:31:11.655+06:00</lastUpdateDate>
+            <signatureValid>false</signatureValid>
+            <invoiceStatus>CREATED</invoiceStatus>
+            <version>InvoiceV2</version>
+            <signature>lHwh9iIHoNJwOKlTK/CqUUhxAMm1pyOq8Rd3bKNlqIwBwXfvIDyU+J4rtu4ZzRtwNlwYaKtJTi/xZEskSpnlvQ==</signature>
+            <signatureType>OPERATOR</signatureType>
+            <certificate>MIIE/TCCBKegAwIBAgIUKMBU71zOBWkAqEzZPG3FXdo3zbswDQYJKoMOAwoBAQECBQAwgc8xCzAJBgNVBAYTAktaMRUwEwYDVQQHDAzQkNCh0KLQkNCd0JAxFTATBgNVBAgMDNCQ0KHQotCQ0J3QkDFMMEoGA1UECgxD0KDQnNCaIMKr0JzQldCc0JvQldCa0JXQotCi0IbQmiDQotCV0KXQndCY0JrQkNCb0KvSmiDSmtCr0JfQnNCV0KLCuzFEMEIGA1UEAww70rDQm9Ci0KLQq9KaINCa0KPTmNCb0JDQndCU0KvQoNCj0KjQqyDQntCg0KLQkNCb0KvSmiAoR09TVCkwHhcNMTgwODAyMTMzMjQzWhcNMTkwODAyMTMzMjQzWjCCAToxJjAkBgNVBAMMHdCR0KPQm9CQ0JHQkNCV0JLQkCDQkNCh0JXQm9CsMRswGQYDVQQEDBLQkdCj0JvQkNCR0JDQldCS0JAxGDAWBgNVBAUTD0lJTjg4MTIyNDQwMTU5MjELMAkGA1UEBhMCS1oxFTATBgNVBAcMDNCQ0JvQnNCQ0KLQqzEVMBMGA1UECAwM0JDQm9Cc0JDQotCrMT0wOwYDVQQKDDTQkNCa0KbQmNCe0J3QldCg0J3QntCVINCe0JHQqdCV0KHQotCS0J4gIktBU1BJIEJBTksiMRgwFgYDVQQLDA9CSU45NzEyNDAwMDEzMTUxGzAZBgNVBCoMEtCV0KDQnNCV0JrQntCS0J3QkDEoMCYGCSqGSIb3DQEJARYZQVNTRUwuQlVMQUJBWUVWQUBLQVNQSS5LWjBsMCUGCSqDDgMKAQEBATAYBgoqgw4DCgEBAQEBBgoqgw4DCgEDAQEAA0MABEAgKWOgqAGDlj9T3r3yCkXV3b6nHKV7dOQX/0yW9iEdhfmtr+IdMAdiinrBv7yHgcgFt+eWYd2Qt2NoIZ6Hb38io4IB2zCCAdcwDgYDVR0PAQH/BAQDAgbAMCgGA1UdJQQhMB8GCCsGAQUFBwMEBggqgw4DAwQBAgYJKoMOAwMEAQICMA8GA1UdIwQIMAaABFW1tK4wHQYDVR0OBBYEFAt5VTI9sYGmn6AcfgIoSkZFu+PpMF4GA1UdIARXMFUwUwYHKoMOAwMCATBIMCEGCCsGAQUFBwIBFhVodHRwOi8vcGtpLmdvdi5rei9jcHMwIwYIKwYBBQUHAgIwFwwVaHR0cDovL3BraS5nb3Yua3ovY3BzMFAGA1UdHwRJMEcwRaBDoEGGHmh0dHA6Ly9jcmwucGtpLmdvdi5rei9nb3N0LmNybIYfaHR0cDovL2NybDEucGtpLmdvdi5rei9nb3N0LmNybDBUBgNVHS4ETTBLMEmgR6BFhiBodHRwOi8vY3JsLnBraS5nb3Yua3ovZF9nb3N0LmNybIYhaHR0cDovL2NybDEucGtpLmdvdi5rei9kX2dvc3QuY3JsMGMGCCsGAQUFBwEBBFcwVTAvBggrBgEFBQcwAoYjaHR0cDovL3BraS5nb3Yua3ovY2VydC9wa2lfZ29zdC5jZXIwIgYIKwYBBQUHMAGGFmh0dHA6Ly9vY3NwLnBraS5nb3Yua3owDQYJKoMOAwoBAQECBQADQQDixdEk0BqK75y7M+tJHARM+DMeybtt4txTZ9v49fPni2EBCjvKzfjtwshbwx0laf3pwwWQ4xg4cyZEu5S8a15W</certificate>
+            <kogd>0001</kogd>
+        </invoiceInfo>
+    </invoiceSet>
+</esf:invoiceInfoContainer>
