@@ -1,0 +1,51 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+<xs:complexType name="deadline">
+<xs:annotation>
+<xs:documentation>Контроль сроков отклонения</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="dateInput" type="xs:dateTime" minOccurs="0">
+<xs:annotation>
+<xs:documentation>Дата ввода ЭСФ</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="deadlineDate" type="xs:dateTime" minOccurs="0">
+<xs:annotation>
+<xs:documentation>Контрольный срок</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="invoiceId" type="xs:long" minOccurs="0">
+<xs:annotation>
+<xs:documentation>Идентификатор ЭСФ</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="tin" type="xs:string" minOccurs="0">
+<xs:annotation>
+<xs:documentation>БИН</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="type" type="DeadlineType" minOccurs="0">
+<xs:annotation>
+<xs:documentation>Тип дэдлайна</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="DeadlineType">
+<xs:annotation>
+<xs:documentation>Тип контроля сроков</xs:documentation>
+</xs:annotation>
+<xs:restriction base="xs:string">
+<xs:enumeration value="DECLINE">
+<xs:annotation>
+<xs:documentation>Отклонение ЭСФ</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="UNREVOKE">
+<xs:annotation>
+<xs:documentation>Отклонение отзыва ЭСФ</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
