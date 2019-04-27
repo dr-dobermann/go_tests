@@ -14,10 +14,13 @@ import (
 
 	"go.mongodb.org/mongo-driver/bson"
     "go.mongodb.org/mongo-driver/mongo"
-    "go.mongodb.org/mongo-driver/mongo/options"
+	"go.mongodb.org/mongo-driver/mongo/options"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
+// TaxPayer holds data for a single tax payer
 type TaxPayer struct {
+	ID   primitive.ObjectID `bson:"_id,omitempty"`
 	Name string `bson:"name"`
 	TIN  string `bson:"iin"`
 	City string `bson:"city"`
@@ -37,6 +40,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer client.Disconnect(ctx)
 
 	fmt.Println("Connected to MongoDB!")
 
@@ -54,9 +58,9 @@ func main() {
 	}
 	id := res.InsertedID
 
-	fmt.Printf("Taxpayer successfully added with id %v", id)
+	fmt.Printf("Taxpayer successfully added with id %v\n", id)
 
-	cur, err := collection.Find(context.Background(), bson.D{})
+	cur, err := collection.Find(context.Background(), bson.M{})
 	if err != nil {
 		log.Fatalf("couldn't get a cursor: %v", err)
 	}
@@ -68,7 +72,7 @@ func main() {
 			log.Fatalf("could not decode a cursor record: %v", err)
 		}
 
-		fmt.Printf("Taxpayer info:\n  Name: %s\n  IIN: %s\n  City: %s\n", tp.Name, tp.TIN, tp.City)
+		fmt.Printf("Taxpayer info:\n  ID : %v\n  Name: %s\n  IIN: %s\n  City: %s\n", tp.ID.Hex(), tp.Name, tp.TIN, tp.City)
 	}
 	if err := cur.Err(); err != nil {
 		log.Fatalf("error while fetching taxpayers info: %v", err)

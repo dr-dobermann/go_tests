@@ -14,3 +14,4 @@
 
 # Golang modules support
 *.sum
+kafka/.vscode/settings.json
