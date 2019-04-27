@@ -12,12 +12,15 @@ import (
 	"log"
 	"time"
 
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/bson"
     "go.mongodb.org/mongo-driver/mongo"
     "go.mongodb.org/mongo-driver/mongo/options"
 )
 
+// TaxPayer consists data about single tax payer
 type TaxPayer struct {
+	ID   primitive.ObjectID `bson:"_id,omitempty"`
 	Name string `bson:"name"`
 	TIN  string `bson:"iin"`
 	City string `bson:"city"`
@@ -68,7 +71,7 @@ func main() {
 			log.Fatalf("could not decode a cursor record: %v", err)
 		}
 
-		fmt.Printf("Taxpayer info:\n  Name: %s\n  IIN: %s\n  City: %s\n", tp.Name, tp.TIN, tp.City)
+		fmt.Printf("Taxpayer info:\n  ID: %s\n  Name: %s\n  IIN: %s\n  City: %s\n", tp.ID.Hex(), tp.Name, tp.TIN, tp.City)
 	}
 	if err := cur.Err(); err != nil {
 		log.Fatalf("error while fetching taxpayers info: %v", err)
