@@ -1,5 +1,16 @@
 package main
 
+/*
+Docker containers from confluent Inc are using in this project as followed
+
+docker network create kafka
+
+docker run --network kafka -d --name=zookeeper -e ZOOKEEPER_CLIENT_PORT=2181 confluentinc/cp-zookeeper:latest
+
+docker run --network kafka -d -p 9092:9092 --name=kafka -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092 -e KAFKA_OFFSET_TOPIC_REPLICATION_TOPIC=1 confluentinc/cp-kafka:latest
+
+*/
+
 import (
 	"context"
 	"fmt"
