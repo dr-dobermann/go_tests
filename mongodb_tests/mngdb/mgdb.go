@@ -77,11 +77,7 @@ func main() {
 			log.Fatalf("could not decode a cursor record: %v", err)
 		}
 
-<<<<<<< HEAD
-		fmt.Printf("Taxpayer info:\n  ID : %v\n  Name: %s\n  IIN: %s\n  City: %s\n", tp.ID.Hex(), tp.Name, tp.TIN, tp.City)
-=======
 		fmt.Printf("Taxpayer info:\n  ID: %s\n  Name: %s\n  IIN: %s\n  City: %s\n", tp.ID.Hex(), tp.Name, tp.TIN, tp.City)
->>>>>>> mongodb_test
 	}
 	if err := cur.Err(); err != nil {
 		log.Fatalf("error while fetching taxpayers info: %v", err)
