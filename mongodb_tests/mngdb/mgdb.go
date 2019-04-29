@@ -4,6 +4,9 @@ package main
 based on docker image created as followed
 
 docker run -d --name=mongo -p 27017-27019:27017-27019 mongo:latest
+
+connection URI format is:
+mongodb://[username:password@]host1[:port1][,...hostN[:portN]]][/[database][?options]]
 */
 
 import (
@@ -16,14 +19,9 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
     "go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-<<<<<<< HEAD
-// TaxPayer holds data for a single tax payer
-=======
-// TaxPayer consists data about single tax payer
->>>>>>> mongodb_test
+// TaxPayer consists of data about single tax payer
 type TaxPayer struct {
 	ID   primitive.ObjectID `bson:"_id,omitempty"`
 	Name string `bson:"name"`
